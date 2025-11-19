@@ -1,0 +1,27 @@
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+dist/
+build/
+
+# Env files
+.env
+.env.local
+.env.development
+.env.production
+
+# Backend env
+Backend/.env
+Backend/config/*.env
+
+# Frontend env
+Frontend/Foodify/.env
+Frontend/Foodify/.env.*  
+
+# OS / Editor
+.DS_Store
+.vscode/
+.idea/
+
+# Log
