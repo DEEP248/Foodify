@@ -21,14 +21,13 @@ async function createFood(req, res) {
 }
 
 async function getAllFoods(req, res) {
-  const fooditems = await foodModel
-    .find({ foodPartner: req.user._id })
-    .populate("foodPartner");
-  res.status(200).json({
-    message: "Foods Fetched Successfully",
-    fooditems: fooditems,
-  });
+    const foodItems = await foodModel.find({})
+    res.status(200).json({
+        message: "Food items fetched successfully",
+        foodItems
+    })
 }
+
 async function likeFood(req, res) {
   const { foodId } = req.body;
   const user = req.user;

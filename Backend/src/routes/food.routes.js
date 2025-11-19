@@ -10,14 +10,14 @@ const upload = multer({
 
 router.post(
   "/",
-  authFoodPartnerMidleware.authFoodPartnerMidleware,
+  authMiddleware.authFoodPartnerMidleware,
   upload.single("video"),
   foodController.createFood
 );
 
 router.get(
   "/",
-  authFoodPartnerMidleware.authUserMidleware,
+  authMiddleware.authUserMidleware,
   foodController.getAllFoods
 );
 
